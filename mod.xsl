@@ -10,6 +10,7 @@
                 <input type="hidden" value="{login/uid}" name="uid"/>
                 <xsl:choose>
                     <xsl:when test="not(login/uid)">
+                        <p>login...</p>
                         <input type="hidden" value="{$appid}" name="appid"/>
                         <input type="hidden" value="{$secret}" name="secret"/>
                         <input type="hidden" value="{$scope}" name="scope"/>
