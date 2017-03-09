@@ -5,7 +5,7 @@
         <xsl:param name="secret"/>
         <xsl:param name="scope"/>
         <!-- className 'J_OXMod' required  -->
-        <div class="J_OXMod oxmod-wx-login" ox-mod="wx-login" data-env="{login/env}">
+        <div class="J_OXMod oxmod-wx-login" ox-mod="wx-login" data-env="{env/domain}">
 
 
             <form>
