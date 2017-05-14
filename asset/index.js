@@ -1,8 +1,13 @@
-define([], function () {
+define(['zepto'], function () {
     //https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect
 
     return {
         init: function ($mod) {
+
+
+            var isInWeixin=/MicroMessenger/i.test(navigator.userAgent);
+
+            if(!isInWeixin)return;
 
             var env=$mod.attr('data-env');
             if(env=='online'){
