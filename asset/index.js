@@ -17,6 +17,12 @@ define([], function () {
                     var redirect_uri=location.protocol+'//'+location.hostname+'/export/oauth_wx?backurl='+encodeURIComponent(location.href)+'&secret='+ f.secret.value+'&appid='+ appid
 
                     location.href='https://open.weixin.qq.com/connect/oauth2/authorize?appid='+appid+'&redirect_uri='+encodeURIComponent(redirect_uri)+'&response_type=code&scope='+scope+'&state='+state+'#wechat_redirect'
+                }else if(f.sync_url.value){
+                    $.getJSON(f.sync_url.value,{uid: f.uid.value},function(){
+
+                    })
+
+
                 }
             }else{
                 console.log('env',env)

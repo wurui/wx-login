@@ -4,6 +4,7 @@
         <xsl:param name="appid"/>
         <xsl:param name="secret"/>
         <xsl:param name="scope"/>
+        <xsl:param name="sync_url"/>
         <!-- className 'J_OXMod' required  -->
         <div class="J_OXMod oxmod-wx-login" ox-mod="wx-login" data-env="{env/domain}">
             <form>
@@ -16,7 +17,8 @@
                         <input type="hidden" value="{$scope}" name="scope"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        Welcome:<img src="http://i.oxm1.cc/uploads/{login/uid}/user/avatar.png@!60"/><xsl:value-of select="login/nick"/>
+                        <input type="hidden" value="{$sync_url}" name="sync_url"/>
+                        <xsl:value-of select="login/name"/>
                     </xsl:otherwise>
                 </xsl:choose>
             </form>
