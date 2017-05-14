@@ -23,8 +23,8 @@ define(['zepto'], function () {
 
                     location.href='https://open.weixin.qq.com/connect/oauth2/authorize?appid='+appid+'&redirect_uri='+encodeURIComponent(redirect_uri)+'&response_type=code&scope='+scope+'&state='+state+'#wechat_redirect'
                 }else if(f.sync_url.value){
-                    alert([f.sync_url.value,f.uid.value].join(' --  '))
-                    $.getJSON(f.sync_url.value,{uid: f.uid.value},function(){
+
+                    $.getJSON(f.sync_url.value,{uid: f.uid.value,ts:Date.now()},function(){
                         alert(r);
                     })
                 }
