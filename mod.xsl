@@ -18,7 +18,7 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <input type="hidden" value="{$sync_url}" name="sync_url"/>
-                        <xsl:value-of select="login/name"/>
+                        <xsl:value-of select="login/uid"/>
                     </xsl:otherwise>
                 </xsl:choose>
             </form>
