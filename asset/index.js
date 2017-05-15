@@ -25,7 +25,8 @@ define(['zepto'], function () {
                 }else if(f.sync_url.value){
 
                     $.getJSON(f.sync_url.value,{uid: f.uid.value,ts:Date.now()},function(){
-                        alert(r);
+                       // alert(r);
+                        console.log('ok')
                     })
                 }
             }else{
